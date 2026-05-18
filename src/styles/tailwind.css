@@ -20,7 +20,21 @@
   @font-face {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
+    font-weight: 300; /* Replace with desired weight */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400; /* Replace with desired weight */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Replace with desired weight */
     font-style: normal;
   }
 }
@@ -28,11 +42,11 @@
 @theme {
   /* Fonts */
   --font-display: "Playfair Display", ui-sans-serif, system-ui, serif;
-  --font-sans: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --font-raleway: "Raleway", ui-sans-serif, system-ui, sans-serif;
 
   /* Weights used */
+  --font-weight-thin: 200;
   --font-weight-regular: 400;
-  --font-weight-medium: 500;
   --font-weight-bold: 700;
 
   /* Layout grid */
@@ -70,6 +84,13 @@
 
   /* Button shadow */
 
+  /* Nav styles */
+  --nav-bg: var(--winered-500);
+  --nav-text: var(--color-text-secondary);
+  --nav-height: 88px;
+  --nav-font: var(--font-raleway);
+  --nav-text-size: 25px;
+
   /* Typography sizes (Desktop) */
   --text-h1-desktop: 64px;
   --text-h2-desktop: 36px;
@@ -105,7 +126,7 @@
 }
 @layer base {
   body {
-    background-color: var(--color-bg);
+    background-color: var(--basewhite-500);
     color: var(--color-text-primary);
     font-family: var(--font-display);
   }
@@ -131,6 +152,19 @@
   /* ------------------------------- */
   /* NAV / HEADER */
   /* ------------------------------- */
+
+  .nav {
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    height: var(--nav-height);
+    font-family: var(--nav-font);
+    font-size: var(--nav-text-size);
+    font-weight: var(--font-weight-thin);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   /* ------------------------------- */
   /* FOOTER */

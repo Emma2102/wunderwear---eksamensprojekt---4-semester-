@@ -1,6 +1,51 @@
 ---
+import { Image } from 'astro:assets';
+import Logo from '../assets/SVG/LOGO.svg';
+import Search from '../assets/SVG/Search.svg';
+import User from '../assets/SVG/User.svg';
+import Cart from '../assets/SVG/Shopping cart.svg';
+import Pil from '../assets/SVG/pil.svg';
 ---
-<section>
-Header - tilføj navigation mm.
+<header>
+<section class="bg-(--winered-500) px-10 py-6">
+<div class="flex items-center justify-between">
+
+    <!-- Logo -->
+    <Image
+      src={Logo}
+      alt="Logo wunderwear"
+      class="w-20 h-auto"
+    />
+
+     <!-- Navigation -->
+    <nav class="nav flex gap-8">
+    <a href="#" class="flex items-center gap-2">
+  Shop
+  <Image src={Pil} alt="Pil" class="w-6" />
+</a>
+
+    <a href="#" class="flex items-center gap-2">
+  Brands
+  <Image src={Pil} alt="Pil" class="w-6" />
+</a>
+
+    <a href="#" class="flex items-center gap-2">
+Inspiration 
+  <Image src={Pil} alt="Pil" class="w-6" />
+</a>
+
+    <a href="#" class="flex items-center gap-2">
+Butikker
+  <Image src={Pil} alt="Pil" class="w-6" />
+</a>
+</nav>  
+
+      <!-- Ikoner -->
+    <div class="flex gap-5">
+      <Image src={Search} alt="Søg" class="w-8" />
+      <Image src={User} alt="Profil" class="w-8" />
+      <Image src={Cart} alt="Kurv" class="w-8" />
+    </div>
+
 </section>
-s
+</header>
