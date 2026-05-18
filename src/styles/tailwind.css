@@ -1,27 +1,151 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
-@theme {
-  /* Her tilføjes theme variable // tokens */
-}
+/* -------------------------------- */
+/* FONTS */
+/* Put the font files in /public/fonts */
+/* -------------------------------- */
+@font-face {
+  .playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Replace with desired weight */
+    font-style: normal;
+  }
 
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+  @font-face {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Replace with desired weight */
+    font-style: normal;
   }
 }
 
-@layer components{
+@theme {
+  /* Fonts */
+  --font-display: "Playfair Display", ui-sans-serif, system-ui, serif;
+  --font-sans: "Raleway", ui-sans-serif, system-ui, sans-serif;
 
+  /* Weights used */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Layout grid */
+
+  /* Radius tokens */
+  --radius-1: 20px; /* cards */
+  --radius-2: 50px;
+
+  --radius-card: var(--radius-1);
+  --radius-btn: var(--radius-2);
+
+  /* Background */
+  --color-bg: #f9f4f0;
+
+  /* WineRed */
+  --winered-500: #6d1718;
+  --winered-50: #fae2e3;
+
+  /* Pink */
+  --pink-500: #d9a5a6;
+
+  /* Secondary white */
+  --secondary-white-500: #f2e9e5;
+
+  /* Secondary basewhite */
+  --basewhite-500: #f9f4f0;
+
+  /* Semantic aliases */
+  --color-text-primary: var(--winered-500);
+  --color-text-secondary: var(--basewhite-500);
+
+  /* Button typography */
+
+  /* Button text color */
+
+  /* Button shadow */
+
+  /* Typography sizes (Desktop) */
+  --text-h1-desktop: 64px;
+  --text-h2-desktop: 36px;
+  --text-h3-desktop: 24px;
+  --text-p1-desktop: 20px;
+  --text-p2-desktop: 12px;
+
+  /* Typography sizes (Mobile) */
+  --text-h1-mobile: 20px;
+  --text-h2-mobile: 11px;
+  --text-p1-mobile: 16px;
+  --text-p2-mobile: 8px;
+
+  /* Header + Footer */
+  --color-header: var(--winered-500);
+  --color-footer: var(--winered-500);
+
+  /* Button hover color fills */
+
+  /* -------------------------------- */
+  /* RABATCARD TYPOGRAPHY TOKENS */
+  /* -------------------------------- */
+
+  /* button sizes */
+
+  /* -------------------------------- */
+  /* SIZECARD TYPOGRAPHY TOKENS */
+  /* -------------------------------- */
+
+  /* -------------------------------- */
+  /* BASE */
+  /* -------------------------------- */
 }
-@layer utilities{
-  
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: var(--font-display);
+  }
+}
+
+/* -------------------------------- */
+/* COMPONENTS */
+/* -------------------------------- */
+
+@layer components {
+  /* ------------------------------- */
+  /* LAYOUT HELPERS */
+  /* ------------------------------- */
+
+  /* ------------------------------- */
+  /* CARD */
+  /* ------------------------------- */
+
+  /* ------------------------------- */
+  /* BUTTONS */
+  /* ------------------------------- */
+
+  /* ------------------------------- */
+  /* NAV / HEADER */
+  /* ------------------------------- */
+
+  /* ------------------------------- */
+  /* FOOTER */
+  /* ------------------------------- */
+
+  /* ------------------------------- */
+  /* DECORATIVE LINES */
+  /* ------------------------------- */
+
+  /* ------------------------------- */
+  /* TYPOGRAPHY CLASSES */
+  /* ------------------------------- */
+}
+
+@layer components {
+}
+@layer utilities {
 }
