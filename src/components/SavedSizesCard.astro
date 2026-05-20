@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import Pil from "../assets/SVG/Chevron down.svg";
+---
+
+<section class="saved-sizes-card">
+  <div class="saved-sizes-card__header">
+    <h2>Dine gemte størrelser</h2>
+    <p>baseret på tidligere køb</p>
+  </div>
+
+  <details class="saved-size-item">
+    <summary>
+      <span>BH-størrelse</span>
+      <span>Brand</span>
+      <Image src={Pil} alt="pil" class="saved-size-arrow" />
+    </summary>
+
+    <div class="saved-size-content">
+      <div>
+        <p>75C</p>
+        <p>38</p>
+        <a href="#">Se mere</a>
+      </div>
+
+      <div>
+        <p>Primadonna</p>
+        <p>Missya Bodywear</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="saved-size-item">
+    <summary>
+      <span>Trusse-størrelse</span>
+      <span>Brand</span>
+      <Image src={Pil} alt="pil" class="saved-size-arrow" />
+    </summary>
+
+    <div class="saved-size-content">
+      <div>
+        <p>36</p>
+        <p>S</p>
+        <a href="#">Se mere</a>
+      </div>
+
+      <div>
+        <p>Marie Jo</p>
+        <p>Calvin Klein</p>
+      </div>
+    </div>
+  </details>
+
+  <div class="saved-size-bottom">
+    <a href="#">Se størrelsesguide</a>
+    <button>Ændre dine størrelser</button>
+  </div>
+</section>

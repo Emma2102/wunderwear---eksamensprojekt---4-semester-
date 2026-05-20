@@ -10,13 +10,14 @@ import Lingeri from '../assets/images/lingeri.png';
 import Beach from '../assets/images/beach.jpg';
 import Boelge from '../assets/SVG/boelge2.svg';
 import Point from '../assets/SVG/pointbar.svg';
+import SavedSizesCard from '../components/SavedSizesCard.astro';
 
 ---
 <MainLayout title="Titel">
 
 
 
-	<article class="m-[50px_80px_50px_80px]">
+	<article class="m-[20px_80px_20px_80px]">
 
 		<section class="content-section">
 
@@ -31,11 +32,11 @@ import Point from '../assets/SVG/pointbar.svg';
 
 
 <div class="grid grid-cols-2 gap-8">
-	<div class="flex flex-col gap-3">
+	<div class="flex flex-col gap-10">
 	<h1 class="h1-desktop">
   Hej Navn!
 </h1>
-	<p>Optjen Wunder Points hver gang du handler både online og i butikker. Brug dem til rabatter, se dine kuponer og følg din vej mod næste medlemsniveau.</p>
+	<p>Optjen <strong>Wunder Points</strong> hver gang du handler både online og i butikker. Brug dem til rabatter, se dine kuponer og følg din vej mod næste medlemsniveau.</p>
 	<h3 class="h3-desktop">175 Wunder Points</h3>
 	<Image
 	src={Point}
@@ -47,13 +48,13 @@ import Point from '../assets/SVG/pointbar.svg';
 </a>
   </div>
   <div>
-	<p>noget her</p>
+	  <SavedSizesCard />
   </div>
 	</div>
 
 
 	<section class="promo-section mt-10">
-		<h1 class="h2-desktop mb-3">Dine rabatkuponer</h1>
+		<h1 class="h1-desktop mb-3">Dine rabatkuponer</h1>
 
   <div class="promo-slider-wrapper">
 

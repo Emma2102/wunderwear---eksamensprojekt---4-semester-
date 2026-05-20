@@ -149,6 +149,8 @@
   /* ------------------------------- */
   /* CARD */
   /* ------------------------------- */
+
+  /*Promo card*/
   .promo-card {
     overflow: hidden;
     border-radius: var(--radius-card);
@@ -160,6 +162,12 @@
     flex: 0 0 350px;
 
     scroll-snap-align: start;
+
+    transition:
+      background-color 0.7s ease,
+      transform 0.7s ease;
+
+    cursor: pointer;
   }
 
   .promo-card__image {
@@ -209,9 +217,122 @@
     margin-right: -80px;
   }
 
+  .promo-card:hover {
+    background: var(--pink-500);
+  }
+
+  /*Size card*/
+  .saved-sizes-card {
+    background: var(--pink-300);
+    color: var(--winered-500);
+    padding: 2rem 3rem;
+  }
+
+  .saved-sizes-card__header {
+    margin-bottom: 3rem;
+  }
+
+  .saved-sizes-card__header h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-h2-desktop);
+    line-height: 1;
+  }
+
+  .saved-sizes-card__header p {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+  }
+
+  .saved-size-item {
+    margin-bottom: 3rem;
+  }
+
+  .saved-size-item summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+
+    border-bottom: 2px solid var(--winered-500);
+    padding-bottom: 0.5rem;
+
+    list-style: none;
+    cursor: pointer;
+
+    font-family: var(--font-raleway);
+    font-size: var(--text-h3-desktop);
+    font-weight: var(--font-weight-regular);
+  }
+
+  .saved-size-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .saved-size-arrow {
+    width: 30px;
+    transition: transform 0.3s ease;
+  }
+
+  .saved-size-item[open] .saved-size-arrow {
+    transform: rotate(180deg);
+  }
+
+  .saved-size-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1rem;
+
+    font-family: var(--font-raleway);
+    font-size: var(--text-p1-desktop);
+    line-height: 1.5;
+  }
+
+  .saved-size-content a {
+    color: var(--winered-500);
+    text-decoration: underline;
+  }
+
   /* ------------------------------- */
   /* BUTTONS */
   /* ------------------------------- */
+
+  /* Size card buttons */
+
+  .saved-size-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .saved-size-bottom a {
+    color: var(--winered-500);
+    font-family: var(--font-raleway);
+    font-size: var(--text-p1-desktop);
+    font-weight: var(--font-weight-regular);
+    text-decoration: underline;
+  }
+
+  .saved-size-bottom button {
+    border: none;
+    border-radius: var(--radius-btn);
+    background: var(--pink-500);
+    color: var(--winered-500);
+
+    padding: 1rem 2rem;
+
+    font-family: var(--font-raleway);
+    font-size: var(--text-p1-desktop);
+
+    transition:
+      background-color 0.7s ease,
+      transform 0.7s ease;
+
+    cursor: pointer;
+  }
+
+  .saved-size-bottom:hover button {
+    background: var(--basewhite-500);
+  }
 
   /* ------------------------------- */
   /* NAV / HEADER */
@@ -331,13 +452,8 @@
   /* ------------------------------- */
   /* TYPOGRAPHY CLASSES */
   /* ------------------------------- */
-  .h1-desktop {
-    font-size: var(--text-h1-desktop);
-    font-family: var(--font-display);
-    font-weight: var(--font-weight-bold);
-  }
 
-  .h2-desktop {
+  .h1-desktop {
     font-size: var(--text-h2-desktop);
     font-family: var(--font-display);
     font-weight: var(--font-weight-bold);
