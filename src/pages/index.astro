@@ -3,12 +3,124 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
+import PromoCard from '../components/PromoCard.astro';
+import Bra from '../assets/images/bra.png';
+import Trusser from '../assets/images/trusser.png';
+import Lingeri from '../assets/images/lingeri.png';
+import Beach from '../assets/images/beach.jpg';
+import Boelge from '../assets/SVG/boelge2.svg';
+import Point from '../assets/SVG/pointbar.svg';
+
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1 class="text-6xl" style="font-family: var(--font-raleway);">Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+
+
+
+	<article class="m-[50px_80px_50px_80px]">
+
+		<section class="content-section">
+
+  <Image
+    src={Boelge}
+    alt="baggrundsbølge"
+    class="content-wave"
+    aria-hidden="true"
+  />
+
+  <div class="content-section__inner">
+
+
+<div class="grid grid-cols-2 gap-8">
+	<div class="flex flex-col gap-3">
+	<h1 class="h1-desktop">
+  Hej Navn!
+</h1>
+	<p>Optjen Wunder Points hver gang du handler både online og i butikker. Brug dem til rabatter, se dine kuponer og følg din vej mod næste medlemsniveau.</p>
+	<h3 class="h3-desktop">175 Wunder Points</h3>
+	<Image
+	src={Point}
+	alt="Pointsystem"
+	class="w-150"
+	   />
+<a href="#" class="underline font-[var(--font-weight-thin)]">
+  Se alle medlemsfordelene her
+</a>
+  </div>
+  <div>
+	<p>noget her</p>
+  </div>
+	</div>
+
+
+	<section class="promo-section mt-10">
+		<h1 class="h2-desktop mb-3">Dine rabatkuponer</h1>
+
+  <div class="promo-slider-wrapper">
+
+<div class="promo-slider">
+
+	<PromoCard
+  image={Lingeri.src}
+    class="promo-card__image"
+  title="20% på hele købet"
+  subtitle="Gælder alle varer – også nyheder"
 />
+
+	<PromoCard
+  image={Trusser.src}
+    class="promo-card__image"
+  title="Wunder deal: 3 for 2 på trusser"
+  subtitle="Rabatten fratrækkes automatisk på den billigste vare"
+/>
+
+	<PromoCard
+  image={Beach.src}
+    class="promo-card__image"
+  title="Eksklusiv: -15% for medlemmer"
+  subtitle="Kun med Wunder points"
+/>
+
+	<PromoCard
+  image={Bra.src}
+    class="promo-card__image"
+  title="Spar 100 kr."
+  subtitle="Ved køb over 500 kr."
+/>
+
+<PromoCard
+  image={Lingeri.src}
+    class="promo-card__image"
+  title="20% på hele købet"
+  subtitle="Gælder alle varer – også nyheder"
+/>
+
+	<PromoCard
+  image={Trusser.src}
+    class="promo-card__image"
+  title="Wunder deal: 3 for 2 på trusser"
+  subtitle="Rabatten fratrækkes automatisk på den billigste vare"
+/>
+
+	<PromoCard
+  image={Beach.src}
+    class="promo-card__image"
+  title="Eksklusiv: -15% for medlemmer"
+  subtitle="Kun med Wunder points"
+/>
+
+	<PromoCard
+  image={Bra.src}
+    class="promo-card__image"
+  title="Spar 100 kr."
+  subtitle="Ved køb over 500 kr."
+/>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
 	</article>
 </MainLayout>
