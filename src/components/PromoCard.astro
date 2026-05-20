@@ -1,0 +1,18 @@
+---
+const { image, title, subtitle } = Astro.props;
+---
+
+<div class="promo-card">
+  
+  <img
+    src={image}
+    alt={title}
+    class="promo-card__image"
+  />
+
+  <div class="promo-card__content">
+    <h2>{title}</h2>
+    <p>{subtitle}</p>
+  </div>
+
+</div>
