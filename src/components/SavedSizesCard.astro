@@ -52,7 +52,57 @@ import Pil from "../assets/SVG/Chevron down.svg";
   </details>
 
   <div class="saved-size-bottom">
-    <a href="#">Se størrelsesguide</a>
+
+   <button
+  class="size-guide-trigger"
+  type="button"
+  data-size-guide-open
+>
+  Se størrelsesguide
+</button>
+
     <button>Ændre dine størrelser</button>
   </div>
 </section>
+
+<div class="size-guide-overlay is-hidden" data-size-guide-popup>
+
+  <section class="size-guide-popup">
+
+    <button
+      class="size-guide-close"
+      type="button"
+      data-size-guide-close
+    >
+      ×
+    </button>
+
+    <img
+      src="/images/stoerrelsesguide.png"
+      alt="Størrelsesguide"
+      class="size-guide-image"
+    />
+
+  </section>
+
+</div>
+
+<script>
+  const openButton = document.querySelector("[data-size-guide-open]");
+  const closeButton = document.querySelector("[data-size-guide-close]");
+  const popup = document.querySelector("[data-size-guide-popup]");
+
+  openButton?.addEventListener("click", () => {
+    popup?.classList.remove("is-hidden");
+  });
+
+  closeButton?.addEventListener("click", () => {
+    popup?.classList.add("is-hidden");
+  });
+
+  popup?.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      popup.classList.add("is-hidden");
+    }
+  });
+</script>
