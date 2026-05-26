@@ -1,38 +1,41 @@
 ---
 import { Image } from 'astro:assets';
+
 import Logo from '../assets/SVG/LOGO.svg';
 import Insta from '../assets/SVG/Instagram.svg';
 import Facebook from '../assets/SVG/Facebook.svg';
 import App from '../assets/SVG/app icon.svg';
 import Boelge from '../assets/SVG/boelge.svg';
 ---
+
 <section class="footer">
 
-  <!-- Baggrundselementer -->
   <Image
     src={Logo}
-    alt="Logo wunderwear"
+    alt=""
     class="footer-logo"
+    aria-hidden="true"
   />
 
   <Image
     src={Boelge}
-    alt="Bølge"
+    alt=""
     class="footer-boelge"
+    aria-hidden="true"
   />
+
   <div class="footer-content">
 
-     <div class="footer-column">
-        <h3>Om wunderwear</h3>
-        <a href="#">Koncept</a>
+    <div class="footer-column">
+      <h3>Om wunderwear</h3>
+      <a href="#">Koncept</a>
       <a href="#">Lingeristyling</a>
       <a href="#">Bytte og returregler</a>
       <a href="#">Wunderclub</a>
-  </div>
+    </div>
 
-   <div class="footer-column">
+    <div class="footer-column">
       <h3>Shopping online</h3>
-
       <a href="#">Gavekort</a>
       <a href="#">Handelsbetingelser</a>
       <a href="#">Persondatapolitik</a>
@@ -43,28 +46,28 @@ import Boelge from '../assets/SVG/boelge.svg';
 
     <div class="footer-column">
       <h3>Kontakt</h3>
-
       <a href="#">Onlineshoppen</a>
       <a href="#">Butikkerne</a>
 
-     <h3>Følg med</h3>
- <div class="socials">
-  <a href="#">
-    <Image src={Insta} alt="Instagram" class="w-10" />
-  </a>
+      <div class="footer-social-block">
+        <h3>Følg med</h3>
 
-  <a href="#">
-    <Image src={Facebook} alt="Facebook" class="w-10" />
-  </a>
+        <div class="socials">
+          <a href="#">
+            <Image src={Insta} alt="Instagram" class="socials__icon" />
+          </a>
 
-  <a href="#">
-    <Image src={Logo} alt="Wunderwear" class="w-10" />
-  </a>
-</div>
+          <a href="#">
+            <Image src={Facebook} alt="Facebook" class="socials__icon" />
+          </a>
 
-</div>
+          <a href="#">
+            <Image src={App} alt="Wunderwear app" class="socials__icon" />
+          </a>
+        </div>
+      </div>
+    </div>
 
   </div>
 
 </section>
-  

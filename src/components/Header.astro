@@ -1,51 +1,55 @@
 ---
 import { Image } from 'astro:assets';
+
 import Logo from '../assets/SVG/LOGO.svg';
 import Search from '../assets/SVG/Search.svg';
 import User from '../assets/SVG/User.svg';
 import Cart from '../assets/SVG/Shopping cart.svg';
 import Pil from '../assets/SVG/pil.svg';
 ---
-<header>
-<section class="bg-(--winered-500) px-10 py-2">
-<div class="flex items-center justify-between">
 
-    <!-- Logo -->
-    <Image
-      src={Logo}
-      alt="Logo wunderwear"
-      class="w-20 h-auto"
-    />
+<header class="header">
+  <section class="header__inner">
 
-     <!-- Navigation -->
-    <nav class="nav flex gap-8">
-    <a href="#" class="flex items-center gap-2">
-  Shop
-  <Image src={Pil} alt="Pil" class="w-6" />
-</a>
+    <a href="/" class="header__logo">
+      <Image src={Logo} alt="Logo wunderwear" class="header__logo-image" />
+    </a>
 
-    <a href="#" class="flex items-center gap-2">
-  Brands
-  <Image src={Pil} alt="Pil" class="w-6" />
-</a>
+    <nav class="nav">
+      <a href="#" class="nav__link">Shop <Image src={Pil} alt="" class="nav__arrow" /></a>
+      <a href="#" class="nav__link">Brands <Image src={Pil} alt="" class="nav__arrow" /></a>
+      <a href="#" class="nav__link">Inspiration <Image src={Pil} alt="" class="nav__arrow" /></a>
+      <a href="#" class="nav__link">Butikker <Image src={Pil} alt="" class="nav__arrow" /></a>
+    </nav>
 
-    <a href="#" class="flex items-center gap-2">
-Inspiration 
-  <Image src={Pil} alt="Pil" class="w-6" />
-</a>
-
-    <a href="#" class="flex items-center gap-2">
-Butikker
-  <Image src={Pil} alt="Pil" class="w-6" />
-</a>
-</nav>  
-
-      <!-- Ikoner -->
-    <div class="flex gap-5">
-      <Image src={Search} alt="Søg" class="w-8" />
-      <Image src={User} alt="Profil" class="w-8" />
-      <Image src={Cart} alt="Kurv" class="w-8" />
+    <div class="header-icons">
+      <a href="#"><Image src={Search} alt="Søg" class="header-icons__icon" /></a>
+      <a href="#"><Image src={User} alt="Profil" class="header-icons__icon" /></a>
+      <a href="#"><Image src={Cart} alt="Kurv" class="header-icons__icon" /></a>
     </div>
 
-</section>
+    <button class="burger" type="button" aria-label="Åbn menu" data-burger>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </section>
+
+  <nav class="mobile-menu" data-mobile-menu>
+    <a href="#">Shop</a>
+    <a href="#">Brands</a>
+    <a href="#">Inspiration</a>
+    <a href="#">Butikker</a>
+  </nav>
 </header>
+
+<script>
+  const burger = document.querySelector("[data-burger]");
+  const mobileMenu = document.querySelector("[data-mobile-menu]");
+
+  burger?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("is-open");
+    burger?.classList.toggle("is-open");
+  });
+</script>

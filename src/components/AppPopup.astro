@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+
+import Phones from "../assets/images/app-popup-phones.png";
+import QR from "../assets/images/qr-code.png";
+---
+
+<div class="app-popup-overlay" data-popup>
+
+  <section class="app-popup">
+
+    <button
+      class="app-popup__close"
+      type="button"
+      data-popup-close
+    >
+      ×
+    </button>
+
+    <h2>
+      Optjen point, få eksklusive fordele og følg dine køb
+    </h2>
+
+    <h2> direkte i appen. </h2>
+
+    <div class="app-popup__content">
+
+      <div class="app-popup__left">
+        <Image
+          src={Phones}
+          alt="Wunderclub app"
+          class="app-popup__phones"
+        />
+      </div>
+
+      <div class="app-popup__right">
+
+        <p class="app-popup__text-bold">
+          Download Wunderclub appen i dag, helt gratis!
+        </p>
+
+        <p class="app-popup__text">
+          Find appen i Appstore eller scan QR-koden
+        </p>
+
+        <Image
+          src={QR}
+          alt="QR kode"
+          class="app-popup__qr"
+        />
+
+        <a href="#" class="app-popup__button">
+          HENT APPEN
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<script>
+  const popup = document.querySelector("[data-popup]");
+  const closeButton = document.querySelector("[data-popup-close]");
+
+  popup?.classList.add("is-hidden");
+
+  setTimeout(() => {
+    popup?.classList.remove("is-hidden");
+  }, 3000);
+
+  closeButton?.addEventListener("click", () => {
+    popup?.classList.add("is-hidden");
+  });
+</script>
