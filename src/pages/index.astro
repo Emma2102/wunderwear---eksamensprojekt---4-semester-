@@ -11,13 +11,14 @@ import Beach from '../assets/images/beach.jpg';
 import Boelge from '../assets/SVG/boelge2.svg';
 import Point from '../assets/SVG/pointbar.svg';
 import SavedSizesCard from '../components/SavedSizesCard.astro';
+import AppPopup from "../components/AppPopup.astro";
 
 ---
 <MainLayout title="Titel">
 
+<AppPopup />
 
-
-	<article class="m-[20px_80px_20px_80px]">
+	<article class="m-[20px_80px_20px_80px] page-content">
 
 		<section class="content-section">
 
@@ -31,7 +32,7 @@ import SavedSizesCard from '../components/SavedSizesCard.astro';
   <div class="content-section__inner">
 
 
-<div class="grid grid-cols-2 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 	<div class="flex flex-col gap-10">
 	<h1 class="h1-desktop">
   Hej Navn!
