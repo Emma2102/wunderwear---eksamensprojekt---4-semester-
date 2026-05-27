@@ -1,7 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import PromoCard from '../components/PromoCard.astro';
 import Bra from '../assets/images/bra.png';
@@ -14,7 +12,7 @@ import SavedSizesCard from '../components/SavedSizesCard.astro';
 import AppPopup from "../components/AppPopup.astro";
 
 ---
-<MainLayout title="Titel">
+<MainLayout title="Profil">
 
 <AppPopup />
 
@@ -44,7 +42,10 @@ import AppPopup from "../components/AppPopup.astro";
 	alt="Pointsystem"
 	class="w-150"
 	   />
-<a href="#" class="underline font-[var(--font-weight-thin)]">
+<a
+  href="/medlemsfordele"
+  class="underline font-[var(--font-weight-thin)]"
+>
   Se alle medlemsfordelene her
 </a>
   </div>
