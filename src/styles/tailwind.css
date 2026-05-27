@@ -767,12 +767,29 @@
     width: 22px;
   }
 
+  .text-mf {
+    font-size: var(--text-h1-desktop);
+    font-family: var(--font-display);
+  }
+
+  .p-mf {
+    font-size: var(--text-p1-desktop);
+    font-family: var(--font-raleway);
+  }
   /* tablet + mobil */
 
   @media (max-width: 1024px) {
     .member-card {
       padding: 1.5rem;
       border-radius: 2rem;
+    }
+
+    .text-mf {
+      font-size: var(--text-h2-desktop);
+    }
+
+    .p-mf {
+      font-size: var(--text-p1-mobile);
     }
 
     .member-card__title {
