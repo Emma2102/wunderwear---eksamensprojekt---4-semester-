@@ -1,0 +1,60 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from 'astro:assets';
+import MemberCard from '../components/MedlemCard.astro';
+---
+
+<MainLayout title="Medlemsfordelene">
+
+<section class="m-[20px_80px_20px_80px]">
+
+    <h1 class="h1-desktop mb-3">Medlemsfordele</h1>
+    <p class="h3-desktop mb-3">Her får du et overblik over dine fordele som medlem</p>
+    
+    <div class="member-cards">
+  <MemberCard
+  title="Wunder - Member"
+  benefits={[
+    "Optjen Wunder Points på alle køb",
+    "Eksklusive medlemsrabatter",
+    "Gratis lingeristyling",
+    "Tidlig adgang til kampagner",
+  ]}
+/>
+
+<MemberCard
+  title="Silver - Member"
+  benefits={[
+    "Optjen Wunder Points på alle køb",
+    "Eksklusive medlemsrabatter",
+    "Gratis lingeristyling",
+    "Tidlig adgang til kampagner",
+  ]}
+/>
+
+<MemberCard
+  title="Gold - Member"
+  benefits={[
+    "Optjen Wunder Points på alle køb",
+    "Eksklusive medlemsrabatter",
+    "Gratis lingeristyling",
+    "Tidlig adgang til kampagner",
+  ]}
+/>
+
+<MemberCard
+  title="VIP - Member"
+  benefits={[
+    "Optjen Wunder Points på alle køb",
+    "Eksklusive medlemsrabatter",
+    "Gratis lingeristyling",
+    "Tidlig adgang til kampagner",
+  ]}
+/>
+
+</div>
+    
+    <ul class="list">
+</section>
+
+</MainLayout>

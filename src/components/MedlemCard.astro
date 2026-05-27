@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+
+import Pil from '../assets/SVG/pilrod.svg';
+import Check from '../assets/SVG/check.svg';
+
+const {
+  title,
+  benefits = [],
+} = Astro.props;
+---
+
+<details class="member-card">
+
+  <summary class="member-card__summary">
+
+    <h2 class="member-card__title">
+      {title}
+    </h2>
+
+    <Image
+      src={Pil}
+      alt="Åbn medlemsniveau"
+      class="member-card__arrow"
+    />
+
+  </summary>
+
+  <div class="member-card__content">
+
+    <ul class="member-card__list">
+
+      {benefits.map((benefit) => (
+
+        <li class="member-card__item">
+
+          <Image
+            src={Check}
+            alt=""
+            class="member-card__check"
+          />
+
+          <span>{benefit}</span>
+
+        </li>
+
+      ))}
+
+    </ul>
+
+  </div>
+
+</details>
