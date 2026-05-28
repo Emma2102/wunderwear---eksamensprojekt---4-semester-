@@ -1179,6 +1179,7 @@
 
   @media (max-width: 1024px) {
     .content-wave {
+      overflow: hidden;
       right: -5rem;
       bottom: 30rem;
       width: 80rem;
