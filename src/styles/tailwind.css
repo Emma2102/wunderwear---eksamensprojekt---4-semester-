@@ -1168,7 +1168,7 @@
   /* ------------------------------- */
 
   .content-wave {
-    oweflow: hidden;
+    overflow: hidden;
     position: absolute;
     right: -10rem;
     bottom: 0;
