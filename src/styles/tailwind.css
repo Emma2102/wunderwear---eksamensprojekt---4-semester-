@@ -1175,14 +1175,13 @@
     opacity: 0.05;
     z-index: 1;
     pointer-events: none;
-    overflow-x: clip;
   }
 
   @media (max-width: 1024px) {
     .content-wave {
       overflow: hidden;
-      right: -5rem;
-      bottom: 30rem;
+      right: 0rem;
+      bottom: 25rem;
       width: 80rem;
     }
   }
