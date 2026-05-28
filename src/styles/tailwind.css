@@ -1189,6 +1189,7 @@
   .content-section__inner {
     position: relative;
     z-index: 2;
+    overflow-x: clip;
   }
 
   /* Main grid */
