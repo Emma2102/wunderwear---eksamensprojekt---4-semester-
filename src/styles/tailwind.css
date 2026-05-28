@@ -1175,6 +1175,7 @@
     opacity: 0.05;
     z-index: 1;
     pointer-events: none;
+    overflow-x: clip;
   }
 
   @media (max-width: 1024px) {
